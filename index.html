@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goodwill Security Limited | 24/7 Security Services Auckland</title>
+<meta name="description" content="Goodwill Security Limited provides professional, integrated security solutions across Auckland: static guards, mobile patrols, event security, alarm response and site security. Open 24 hours. Call 0210 570 343.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1220;
+    --navy-2: #101d33;
+    --line: #22314d;
+    --gold: #f0b429;
+    --gold-dark: #cf9312;
+    --text: #eef2f8;
+    --muted: #9fb0c9;
+    --ink: #1a2333;
+    --ink-muted: #55627a;
+    --paper: #f7f9fc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.65; }
+  h1, h2, h3, .logo, .btn { font-family: 'Oswald', 'Inter', sans-serif; letter-spacing: 0.015em; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+  /* Top bar */
+  .topbar { background: var(--navy); color: var(--muted); font-size: 0.85rem; }
+  .topbar .wrap { display: flex; justify-content: space-between; gap: 16px; padding-block: 8px; flex-wrap: wrap; }
+  .topbar a { color: var(--gold); text-decoration: none; font-weight: 600; }
+  .topbar .badge24 { color: var(--text); }
+  .topbar .badge24::before { content: "●"; color: #34d399; margin-right: 6px; font-size: 0.7rem; }
+
+  /* Header */
+  header { position: sticky; top: 0; z-index: 50; background: rgba(10, 18, 32, 0.96); backdrop-filter: blur(8px); border-bottom: 2px solid var(--gold); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; }
+  .logo .shield { width: 40px; height: 44px; flex: none; }
+  .logo small { display: block; font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 500; color: var(--gold); letter-spacing: 0.28em; text-transform: uppercase; }
+  nav.menu { display: flex; align-items: center; gap: 26px; }
+  nav.menu a { color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+  nav.menu a:hover { color: var(--text); }
+  .btn { display: inline-block; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; padding: 12px 26px; border-radius: 4px; }
+  .btn-gold { background: var(--gold); color: var(--navy); }
+  .btn-gold:hover { background: #ffc94d; }
+  .btn-outline { border: 1.5px solid var(--muted); color: var(--text); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .hamburger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; }
+
+  /* Hero */
+  .hero {
+    position: relative; color: var(--text);
+    background: linear-gradient(rgba(10,18,32,0.78), rgba(10,18,32,0.88)),
+      url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1800&q=70&auto=format&fit=crop') center/cover;
+    padding: 120px 0 100px;
+  }
+  .hero .kicker { color: var(--gold); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.12; text-transform: uppercase; max-width: 780px; margin-bottom: 22px; }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero p { color: #c7d2e4; max-width: 620px; font-size: 1.12rem; margin-bottom: 36px; }
+  .hero .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero .actions .btn { padding: 15px 32px; font-size: 1rem; }
+
+  /* Trust strip */
+  .trust { background: var(--navy-2); border-top: 1px solid var(--line); color: var(--text); }
+  .trust .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding-block: 34px; text-align: center; }
+  .trust strong { display: block; font-family: 'Oswald', sans-serif; font-size: 1.7rem; color: var(--gold); }
+  .trust span { color: var(--muted); font-size: 0.88rem; }
+
+  /* Sections */
+  section { padding: 90px 0; }
+  .kicker { color: var(--gold-dark); font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.82rem; margin-bottom: 10px; }
+  h2 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); text-transform: uppercase; line-height: 1.2; margin-bottom: 14px; }
+  .lede { color: var(--ink-muted); max-width: 680px; margin-bottom: 48px; font-size: 1.05rem; }
+
+  /* Services */
+  .services { background: var(--paper); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 26px; }
+  .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(16, 29, 51, 0.08); display: flex; flex-direction: column; }
+  .card img { height: 190px; width: 100%; object-fit: cover; }
+  .card .body { padding: 24px 26px 28px; }
+  .card h3 { font-size: 1.2rem; text-transform: uppercase; margin-bottom: 10px; }
+  .card h3::after { content: ""; display: block; width: 42px; height: 3px; background: var(--gold); margin-top: 8px; }
+  .card p { color: var(--ink-muted); font-size: 0.95rem; }
+
+  /* Why us */
+  .why .cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+  .why img { border-radius: 8px; box-shadow: 0 10px 30px rgba(16,29,51,0.18); }
+  .checks { list-style: none; margin-top: 8px; }
+  .checks li { padding-left: 34px; position: relative; margin-bottom: 16px; color: var(--ink-muted); }
+  .checks li strong { color: var(--ink); display: block; font-weight: 600; }
+  .checks li::before {
+    content: "✓"; position: absolute; left: 0; top: 2px;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.8rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Areas */
+  .areas { background: linear-gradient(rgba(10,18,32,0.85), rgba(10,18,32,0.92)),
+      url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1600&q=65&auto=format&fit=crop') center/cover;
+    color: var(--text); text-align: center; }
+  .areas h2, .areas .kicker { color: var(--text); }
+  .areas .kicker { color: var(--gold); }
+  .areas p { color: #c7d2e4; max-width: 640px; margin: 0 auto 36px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 760px; margin: 0 auto; }
+  .chips span { border: 1px solid var(--line); background: rgba(16,29,51,0.7); border-radius: 99px; padding: 8px 22px; font-size: 0.92rem; color: var(--text); }
+
+  /* Reviews */
+  .reviews { text-align: center; }
+  .stars { color: var(--gold); font-size: 1.9rem; letter-spacing: 6px; margin-bottom: 10px; }
+  .reviews .score { font-family: 'Oswald', sans-serif; font-size: 1.3rem; margin-bottom: 8px; }
+  .reviews p { color: var(--ink-muted); max-width: 560px; margin: 0 auto 28px; }
+
+  /* Contact */
+  .contact { background: var(--navy); color: var(--text); }
+  .contact .kicker { color: var(--gold); }
+  .contact .cols { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: start; }
+  .contact .info-list { list-style: none; margin: 26px 0 30px; }
+  .contact .info-list li { display: flex; gap: 14px; margin-bottom: 20px; color: var(--muted); align-items: baseline; }
+  .contact .info-list .ico { color: var(--gold); flex: none; width: 22px; text-align: center; }
+  .contact .info-list a { color: var(--text); text-decoration: none; font-weight: 600; }
+  .contact .info-list a:hover { color: var(--gold); }
+  .map { border: 0; width: 100%; height: 380px; border-radius: 8px; filter: grayscale(25%); }
+
+  footer { background: var(--navy); border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-block: 26px; }
+  footer a { color: var(--muted); }
+
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+  @media (max-width: 860px) {
+    .why .cols, .contact .cols { grid-template-columns: 1fr; }
+    .hamburger { display: block; }
+    nav.menu {
+      display: none; position: absolute; top: 72px; left: 0; right: 0;
+      background: var(--navy); flex-direction: column; padding: 20px 24px 26px;
+      border-bottom: 2px solid var(--gold); align-items: flex-start;
+    }
+    nav.menu.open { display: flex; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="badge24">Open 24 hours, 7 days</span>
+    <span>Call anytime: <a href="tel:+64210570343">0210 570 343</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <svg class="shield" viewBox="0 0 40 44" fill="none" aria-hidden="true">
+        <path d="M20 2 L37 8 V22 C37 33 29 40 20 43 C11 40 3 33 3 22 V8 Z" fill="#f0b429"/>
+        <path d="M20 6 L33 10.5 V22 C33 30.5 27 36.5 20 39 C13 36.5 7 30.5 7 22 V10.5 Z" fill="#0a1220"/>
+        <path d="M13 22 L18 27 L28 16" stroke="#f0b429" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Goodwill<br><small>Security Limited</small></span>
+    </a>
+    <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="menu">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-gold" href="tel:+64210570343">0210 570 343</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <p class="kicker">Auckland's Trusted Security Partner</p>
+      <h1>Protecting What Matters, <em>Around the Clock</em></h1>
+      <p>Goodwill Security Limited provides professional, integrated security solutions across Auckland, bringing safety and peace of mind to our clients and their communities with highly trained personnel available 24 hours a day.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="tel:+64210570343">Call Now — 0210 570 343</a>
+        <a class="btn btn-outline" href="#contact">Request a Free Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <div class="wrap">
+      <div><strong>★ 4.3</strong><span>Rated on Google Reviews</span></div>
+      <div><strong>24/7</strong><span>Guards &amp; patrols, every day</span></div>
+      <div><strong>Licensed</strong><span>Trained, vetted personnel</span></div>
+      <div><strong>Auckland</strong><span>Wide coverage &amp; nearby areas</span></div>
+    </div>
+  </div>
+
+  <section id="services" class="services">
+    <div class="wrap">
+      <p class="kicker">What We Do</p>
+      <h2>Integrated Security Services</h2>
+      <p class="lede">From a single guard for one night to a full security programme for your business, we tailor every service to your site, your risks, and your budget.</p>
+      <div class="cards">
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=65&auto=format&fit=crop" alt="Commercial buildings protected by static guards" loading="lazy">
+          <div class="body">
+            <h3>Static &amp; Site Guards</h3>
+            <p>Uniformed, professional guards for offices, warehouses, retail and residential sites. A visible deterrent and a calm, trained response when it counts.</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=65&auto=format&fit=crop" alt="City streets at night patrolled by mobile units" loading="lazy">
+          <div class="body">
+            <h3>Mobile Patrols</h3>
+            <p>Scheduled and random patrols of your premises through the night, with lock-up and unlock services, physical checks, and instant reporting.</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=65&auto=format&fit=crop" alt="CCTV security cameras" loading="lazy">
+          <div class="body">
+            <h3>Alarm Response &amp; Monitoring</h3>
+            <p>When your alarm goes off, we respond fast, day or night. We attend, inspect, secure the site, and keep you informed at every step.</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=65&auto=format&fit=crop" alt="Crowd at a live event" loading="lazy">
+          <div class="body">
+            <h3>Event Security</h3>
+            <p>Crowd management, access control, and guest safety for concerts, sports, community events, and private functions of any size.</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=65&auto=format&fit=crop" alt="Construction site with workers in hi-vis" loading="lazy">
+          <div class="body">
+            <h3>Construction Site Security</h3>
+            <p>Protect tools, machinery, and materials from theft and vandalism with dedicated site guards, patrols, and after-hours monitoring.</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&q=65&auto=format&fit=crop" alt="Secure vault door" loading="lazy">
+          <div class="body">
+            <h3>Retail &amp; Loss Prevention</h3>
+            <p>Discreet and uniformed officers who deter shoplifting, support your staff in difficult situations, and keep customers feeling safe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="why">
+    <div class="wrap cols">
+      <div class="reveal">
+        <p class="kicker">Why Goodwill Security</p>
+        <h2>People You Can Trust, Service You Can Count On</h2>
+        <ul class="checks">
+          <li><strong>Highly trained personnel</strong>Every officer is professionally trained, vetted, and held to high standards of conduct and presentation.</li>
+          <li><strong>Open 24 hours, 365 days</strong>Security incidents don't keep business hours. Neither do we. Call any time and talk to a real person.</li>
+          <li><strong>Local Auckland knowledge</strong>Based in Papatoetoe and serving communities across Auckland, we know the areas we protect.</li>
+          <li><strong>Tailored, honest solutions</strong>We scope what your site actually needs, no overselling, with clear pricing and reliable communication.</li>
+        </ul>
+      </div>
+      <img class="reveal" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900&q=65&auto=format&fit=crop" alt="Security team planning around a table" loading="lazy">
+    </div>
+  </section>
+
+  <section id="areas" class="areas">
+    <div class="wrap">
+      <p class="kicker">Where We Work</p>
+      <h2>Serving Auckland &amp; Nearby Areas</h2>
+      <p>From our base in Papatoetoe, our guards and patrol units cover the wider Auckland region.</p>
+      <div class="chips">
+        <span>South Auckland</span>
+        <span>Manukau</span>
+        <span>Auckland Central</span>
+        <span>East Auckland</span>
+        <span>West Auckland</span>
+        <span>North Shore</span>
+        <span>Airport &amp; Surrounds</span>
+        <span>Nearby Regions</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap reveal">
+      <div class="stars" aria-hidden="true">★★★★☆</div>
+      <div class="score">4.3 on Google Reviews</div>
+      <p>Our clients rate us for reliability, professionalism, and peace of mind. See what they say, or leave us a review of your own.</p>
+      <a class="btn btn-gold" href="https://www.google.com/search?q=Goodwill+Security+Limited+Papatoetoe+reviews" target="_blank" rel="noopener">Read Our Google Reviews</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap cols">
+      <div>
+        <p class="kicker">Get In Touch</p>
+        <h2>Request a Free, No-Obligation Quote</h2>
+        <p style="color:var(--muted); max-width:480px;">Tell us about your site or event and we'll recommend the right level of cover. Phone is fastest — we answer 24/7.</p>
+        <ul class="info-list">
+          <li><span class="ico">☎</span><span><a href="tel:+64210570343">0210 570 343</a><br>Available 24 hours, 7 days</span></li>
+          <li><span class="ico">📍</span><span>3 Weston Avenue, Papatoetoe,<br>Manukau, Auckland 2025</span></li>
+          <li><span class="ico">✉</span><span><a href="mailto:info@goodwillsecurity.co.nz">info@goodwillsecurity.co.nz</a></span></li>
+          <li><span class="ico">🕐</span><span>Open 24 hours, every day of the year</span></li>
+        </ul>
+        <a class="btn btn-gold" href="tel:+64210570343">Call 0210 570 343</a>
+      </div>
+      <iframe class="map" title="Map showing Goodwill Security Limited at 3 Weston Avenue, Papatoetoe"
+        src="https://maps.google.com/maps?q=3%20Weston%20Avenue%2C%20Papatoetoe%2C%20Auckland%202025&z=15&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Goodwill Security Limited · 3 Weston Avenue, Papatoetoe, Manukau 2025 · <a href="tel:+64210570343">0210 570 343</a></div>
+    <div><a href="#services">Services</a> · <a href="#areas">Areas</a> · <a href="#contact">Contact</a></div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.menu a').forEach(a =>
+    a.addEventListener('click', () => document.querySelector('.menu').classList.remove('open')));
+</script>
+
+</body>
+</html>
