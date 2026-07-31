@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Goodwill Security Limited | 24/7 Security Services Auckland</title>
 <meta name="description" content="Goodwill Security Limited provides professional, integrated security solutions across Auckland: static guards, mobile patrols, event security, alarm response and site security. Open 24 hours. Call 0210 570 343.">
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -36,17 +37,17 @@
   .topbar .badge24::before { content: "●"; color: #34d399; margin-right: 6px; font-size: 0.7rem; }
 
   /* Header */
-  header { position: sticky; top: 0; z-index: 50; background: rgba(10, 18, 32, 0.96); backdrop-filter: blur(8px); border-bottom: 2px solid var(--blue); }
+  header { position: sticky; top: 0; z-index: 50; background: rgba(10, 18, 32, 0.96); backdrop-filter: blur(8px); border-bottom: 2px solid var(--blue); box-shadow: 0 4px 24px rgba(91,127,251,0.18); }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
   .logo { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; }
-  .logo .shield { width: 46px; height: 46px; flex: none; border-radius: 50%; object-fit: cover; }
+  .logo .shield { width: 48px; height: 48px; flex: none; filter: drop-shadow(0 0 6px rgba(91,127,251,0.35)); }
   .logo small { display: block; font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 500; color: var(--blue); letter-spacing: 0.28em; text-transform: uppercase; }
   nav.menu { display: flex; align-items: center; gap: 26px; }
   nav.menu a { color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
   nav.menu a:hover { color: var(--text); }
-  .btn { display: inline-block; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; padding: 12px 26px; border-radius: 4px; }
-  .btn-blue { background: var(--blue); color: var(--navy); }
-  .btn-blue:hover { background: #7b97ff; }
+  .btn { display: inline-block; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; padding: 12px 26px; border-radius: 4px; transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease; }
+  .btn-blue { background: var(--blue); color: var(--navy); box-shadow: 0 4px 14px rgba(91,127,251,0.3); }
+  .btn-blue:hover { background: #7b97ff; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(91,127,251,0.42); }
   .btn-outline { border: 1.5px solid var(--muted); color: var(--text); }
   .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
   .hamburger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
@@ -55,7 +56,8 @@
   /* Hero */
   .hero {
     position: relative; color: var(--text);
-    background: linear-gradient(rgba(10,18,32,0.78), rgba(10,18,32,0.88)),
+    background: radial-gradient(ellipse at 18% 25%, rgba(91,127,251,0.30), transparent 55%),
+      linear-gradient(rgba(10,18,32,0.78), rgba(10,18,32,0.88)),
       url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1800&q=70&auto=format&fit=crop') center/cover;
     padding: 120px 0 100px;
   }
@@ -81,7 +83,8 @@
   /* Services */
   .services { background: var(--paper); }
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 26px; }
-  .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(16, 29, 51, 0.08); display: flex; flex-direction: column; }
+  .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(16, 29, 51, 0.08); display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(16, 29, 51, 0.16); }
   .card img { height: 190px; width: 100%; object-fit: cover; }
   .card .body { padding: 24px 26px 28px; }
   .card h3 { font-size: 1.2rem; text-transform: uppercase; margin-bottom: 10px; }
@@ -109,7 +112,8 @@
   .areas .kicker { color: var(--blue); }
   .areas p { color: #c7d2e4; max-width: 640px; margin: 0 auto 36px; }
   .chips { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 760px; margin: 0 auto; }
-  .chips span { border: 1px solid var(--line); background: rgba(16,29,51,0.7); border-radius: 99px; padding: 8px 22px; font-size: 0.92rem; color: var(--text); }
+  .chips span { border: 1px solid var(--line); background: rgba(16,29,51,0.7); border-radius: 99px; padding: 8px 22px; font-size: 0.92rem; color: var(--text); transition: border-color 0.2s ease, background 0.2s ease; }
+  .chips span:hover { border-color: var(--blue); background: rgba(91,127,251,0.14); }
 
   /* Reviews */
   .reviews { text-align: center; }
@@ -131,6 +135,24 @@
   footer { background: var(--navy); border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-block: 26px; }
   footer a { color: var(--muted); }
+
+  /* Patrol car */
+  .patrol {
+    position: fixed; bottom: -4px; left: 0; z-index: 40;
+    pointer-events: none; will-change: transform;
+    transform: translateX(-150px);
+    animation: patrol-drive 34s linear 4s infinite;
+  }
+  .patrol img { width: 128px; height: auto; animation: patrol-bob 0.7s ease-in-out infinite; }
+  @keyframes patrol-drive {
+    0%, 58% { transform: translateX(-150px); }
+    100% { transform: translateX(calc(100vw + 40px)); }
+  }
+  @keyframes patrol-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(1.5px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .patrol { display: none; } }
 
   /* Reveal animation */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -161,7 +183,7 @@
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top">
-      <img class="shield" src="logo.jpg" alt="">
+      <img class="shield" src="logo.png" alt="">
       <span>Goodwill<br><small>Security Limited</small></span>
     </a>
     <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.menu').classList.toggle('open')">
@@ -321,6 +343,8 @@
     <div><a href="#services">Services</a> · <a href="#areas">Areas</a> · <a href="#contact">Contact</a></div>
   </div>
 </footer>
+
+<div class="patrol" aria-hidden="true"><img src="patrol-car.png" alt=""></div>
 
 <script>
   const io = new IntersectionObserver(entries => {
