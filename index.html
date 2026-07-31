@@ -5,7 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Goodwill Security Limited | 24/7 Security Services Auckland</title>
 <meta name="description" content="Goodwill Security Limited provides professional, integrated security solutions across Auckland: static guards, mobile patrols, event security, alarm response and site security. Open 24 hours. Call 0210 570 343.">
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" href="logo-small.png">
+<link rel="apple-touch-icon" href="logo-small.png">
+<link rel="canonical" href="https://umair-jm.github.io/Client-project-2/">
+<meta name="theme-color" content="#0a1220">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Goodwill Security Limited | 24/7 Security Services Auckland">
+<meta property="og:description" content="Professional guards, mobile patrols, alarm response and event security across Auckland. Open 24 hours. Call 0210 570 343.">
+<meta property="og:url" content="https://umair-jm.github.io/Client-project-2/">
+<meta property="og:image" content="https://umair-jm.github.io/Client-project-2/logo.png">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Goodwill Security Limited",
+  "description": "24/7 security services across Auckland: static guards, mobile patrols, alarm response, event and construction site security.",
+  "url": "https://umair-jm.github.io/Client-project-2/",
+  "logo": "https://umair-jm.github.io/Client-project-2/logo.png",
+  "image": "https://umair-jm.github.io/Client-project-2/logo.png",
+  "telephone": "+64210570343",
+  "email": "goodwillguards@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3/102 Coronation Road",
+    "addressLocality": "Papatoetoe",
+    "addressRegion": "Auckland",
+    "postalCode": "2025",
+    "addressCountry": "NZ"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "areaServed": "Auckland, New Zealand"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What areas of Auckland do you cover?", "acceptedAnswer": {"@type": "Answer", "text": "We're based in Papatoetoe and cover the wider Auckland region: South Auckland, Manukau, Auckland Central, East and West Auckland, the North Shore, and the airport surrounds. For larger jobs we can travel to nearby regions too."}},
+    {"@type": "Question", "name": "Are you really available 24/7?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Our phones are answered around the clock, every day of the year including public holidays."}},
+    {"@type": "Question", "name": "What types of security do you provide?", "acceptedAnswer": {"@type": "Answer", "text": "Static and site guards, mobile patrols, alarm response and monitoring, event security, construction site security, and retail loss prevention."}},
+    {"@type": "Question", "name": "How quickly can a guard be on site?", "acceptedAnswer": {"@type": "Answer", "text": "That depends on the cover you need, but we regularly arrange short-notice and urgent cover. Call 0210 570 343 and we'll tell you what's possible for your timeframe."}},
+    {"@type": "Question", "name": "Do you take one-off jobs, or only ongoing contracts?", "acceptedAnswer": {"@type": "Answer", "text": "Both. We cover everything from a single guard for one night to a full ongoing security programme for your business."}},
+    {"@type": "Question", "name": "How much does security cost?", "acceptedAnswer": {"@type": "Answer", "text": "Every site is different, so we quote based on your site, hours, and the level of risk. Quotes are free and no-obligation."}}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -58,7 +109,7 @@
     position: relative; color: var(--text);
     background: radial-gradient(ellipse at 18% 25%, rgba(91,127,251,0.30), transparent 55%),
       linear-gradient(rgba(10,18,32,0.78), rgba(10,18,32,0.88)),
-      url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1800&q=70&auto=format&fit=crop') center/cover;
+      url('img/hero.jpg') center/cover;
     padding: 120px 0 100px;
   }
   .hero .kicker { color: var(--blue); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 18px; }
@@ -106,7 +157,7 @@
 
   /* Areas */
   .areas { background: linear-gradient(rgba(10,18,32,0.85), rgba(10,18,32,0.92)),
-      url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1600&q=65&auto=format&fit=crop') center/cover;
+      url('img/areas.jpg') center/cover;
     color: var(--text); text-align: center; }
   .areas h2, .areas .kicker { color: var(--text); }
   .areas .kicker { color: var(--blue); }
@@ -128,21 +179,49 @@
   .contact .info-list { list-style: none; margin: 26px 0 30px; }
   .contact .info-list li { display: flex; gap: 14px; margin-bottom: 20px; color: var(--muted); align-items: baseline; }
   .contact .info-list .ico { color: var(--blue); flex: none; width: 22px; text-align: center; }
+  .contact .info-list .ico svg { width: 18px; height: 18px; vertical-align: -3px; }
   .contact .info-list a { color: var(--text); text-decoration: none; font-weight: 600; }
   .contact .info-list a:hover { color: var(--blue); }
-  .map { border: 0; width: 100%; height: 380px; border-radius: 8px; filter: grayscale(25%); }
+  .map { border: 0; width: 100%; height: 300px; border-radius: 8px; filter: grayscale(25%); }
+
+  /* Quote form */
+  .qform { display: grid; gap: 14px; margin-top: 26px; max-width: 520px; }
+  .qform .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .qform label { display: grid; gap: 6px; font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+  .qform input, .qform select, .qform textarea {
+    background: rgba(16,29,51,0.7); border: 1px solid var(--line); border-radius: 6px;
+    padding: 11px 14px; color: var(--text); font: inherit; font-size: 0.95rem; width: 100%;
+  }
+  .qform textarea { resize: vertical; }
+  .qform input:focus, .qform select:focus, .qform textarea:focus {
+    outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(91,127,251,0.2);
+  }
+  .qform button { justify-self: start; border: 0; cursor: pointer; }
+  .fnote { font-size: 0.85rem; color: var(--muted); }
+  .fnote a { color: var(--text); font-weight: 600; text-decoration: none; }
+  .sent-note { background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.4); color: #7ce7bd; padding: 12px 16px; border-radius: 6px; margin-top: 20px; font-size: 0.95rem; }
+
+  /* FAQ */
+  .faq { background: var(--paper); }
+  .faq details { background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(16,29,51,0.08); margin-bottom: 12px; }
+  .faq summary { cursor: pointer; padding: 18px 22px; padding-right: 46px; font-weight: 600; color: var(--ink); list-style: none; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: var(--blue-dark); font-weight: 700; font-size: 1.2rem; }
+  .faq details[open] summary::after { content: "\2013"; }
+  .faq details p { padding: 0 22px 18px; color: var(--ink-muted); }
 
   footer { background: var(--navy); border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-block: 26px; }
   footer a { color: var(--muted); }
 
   /* Reveal animation */
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.35s ease, transform 0.35s ease; }
   .reveal.in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 
   @media (max-width: 860px) {
     .why .cols, .contact .cols { grid-template-columns: 1fr; }
+    .qform .frow { grid-template-columns: 1fr; }
     .hamburger { display: block; }
     nav.menu {
       display: none; position: absolute; top: 72px; left: 0; right: 0;
@@ -165,7 +244,7 @@
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top">
-      <img class="shield" src="logo.png" alt="">
+      <img class="shield" src="logo-small.png" alt="">
       <span>Goodwill<br><small>Security Limited</small></span>
     </a>
     <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.menu').classList.toggle('open')">
@@ -210,42 +289,42 @@
       <p class="lede">From a single guard for one night to a full security programme for your business, we tailor every service to your site, your risks, and your budget.</p>
       <div class="cards">
         <div class="card reveal">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=65&auto=format&fit=crop" alt="Commercial buildings protected by static guards" loading="lazy">
+          <img src="img/card-guards.jpg" alt="Commercial buildings protected by static guards" loading="lazy">
           <div class="body">
             <h3>Static &amp; Site Guards</h3>
             <p>Uniformed, professional guards for offices, warehouses, retail and residential sites. A visible deterrent and a calm, trained response when it counts.</p>
           </div>
         </div>
         <div class="card reveal">
-          <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=65&auto=format&fit=crop" alt="City streets at night patrolled by mobile units" loading="lazy">
+          <img src="img/card-patrols.jpg" alt="City streets at night patrolled by mobile units" loading="lazy">
           <div class="body">
             <h3>Mobile Patrols</h3>
             <p>Scheduled and random patrols of your premises through the night, with lock-up and unlock services, physical checks, and instant reporting.</p>
           </div>
         </div>
         <div class="card reveal">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=65&auto=format&fit=crop" alt="CCTV security cameras" loading="lazy">
+          <img src="img/card-alarm.jpg" alt="CCTV security cameras" loading="lazy">
           <div class="body">
             <h3>Alarm Response &amp; Monitoring</h3>
             <p>When your alarm goes off, we respond fast, day or night. We attend, inspect, secure the site, and keep you informed at every step.</p>
           </div>
         </div>
         <div class="card reveal">
-          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=65&auto=format&fit=crop" alt="Crowd at a live event" loading="lazy">
+          <img src="img/card-events.jpg" alt="Crowd at a live event" loading="lazy">
           <div class="body">
             <h3>Event Security</h3>
             <p>Crowd management, access control, and guest safety for concerts, sports, community events, and private functions of any size.</p>
           </div>
         </div>
         <div class="card reveal">
-          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=65&auto=format&fit=crop" alt="Construction site with workers in hi-vis" loading="lazy">
+          <img src="img/card-construction.jpg" alt="Construction site with workers in hi-vis" loading="lazy">
           <div class="body">
             <h3>Construction Site Security</h3>
             <p>Protect tools, machinery, and materials from theft and vandalism with dedicated site guards, patrols, and after-hours monitoring.</p>
           </div>
         </div>
         <div class="card reveal">
-          <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&q=65&auto=format&fit=crop" alt="Secure vault door" loading="lazy">
+          <img src="img/card-retail.jpg" alt="Retail store interior protected by loss prevention officers" loading="lazy">
           <div class="body">
             <h3>Retail &amp; Loss Prevention</h3>
             <p>Discreet and uniformed officers who deter shoplifting, support your staff in difficult situations, and keep customers feeling safe.</p>
@@ -267,7 +346,7 @@
           <li><strong>Tailored, honest solutions</strong>We scope what your site actually needs, no overselling, with clear pricing and reliable communication.</li>
         </ul>
       </div>
-      <img class="reveal" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900&q=65&auto=format&fit=crop" alt="Security team planning around a table" loading="lazy">
+      <img class="reveal" src="img/why-us.jpg" alt="Security team planning around a table" loading="lazy">
     </div>
   </section>
 
@@ -298,23 +377,91 @@
     </div>
   </section>
 
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <p class="kicker">Common Questions</p>
+      <h2>Frequently Asked Questions</h2>
+      <div style="max-width:760px;">
+        <details>
+          <summary>What areas of Auckland do you cover?</summary>
+          <p>We're based in Papatoetoe and cover the wider Auckland region: South Auckland, Manukau, Auckland Central, East and West Auckland, the North Shore, and the airport surrounds. For larger jobs we can travel to nearby regions too.</p>
+        </details>
+        <details>
+          <summary>Are you really available 24/7?</summary>
+          <p>Yes. Our phones are answered around the clock, every day of the year including public holidays. Security incidents don't keep business hours, so neither do we.</p>
+        </details>
+        <details>
+          <summary>What types of security do you provide?</summary>
+          <p>Static and site guards, mobile patrols, alarm response and monitoring, event security, construction site security, and retail loss prevention. If you're not sure what your site needs, call us and we'll recommend the right level of cover.</p>
+        </details>
+        <details>
+          <summary>How quickly can a guard be on site?</summary>
+          <p>That depends on the cover you need, but we regularly arrange short-notice and urgent cover. Call 0210 570 343 and we'll tell you straight away what's possible for your timeframe.</p>
+        </details>
+        <details>
+          <summary>Do you take one-off jobs, or only ongoing contracts?</summary>
+          <p>Both. We cover everything from a single guard for one night to a full ongoing security programme for your business, tailored to your site, your risks, and your budget.</p>
+        </details>
+        <details>
+          <summary>How much does security cost?</summary>
+          <p>Every site is different, so we quote based on your site, hours, and the level of risk. Quotes are free, no-obligation, and we keep our pricing clear with no overselling.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="contact">
     <div class="wrap cols">
       <div>
         <p class="kicker">Get In Touch</p>
         <h2>Request a Free, No-Obligation Quote</h2>
         <p style="color:var(--muted); max-width:480px;">Tell us about your site or event and we'll recommend the right level of cover. Phone is fastest — we answer 24/7.</p>
-        <ul class="info-list">
-          <li><span class="ico">☎</span><span><a href="tel:+64210570343">0210 570 343</a><br>Available 24 hours, 7 days</span></li>
-          <li><span class="ico">📍</span><span>3/102 Coronation Road, Papatoetoe,<br>Auckland 2025</span></li>
-          <li><span class="ico">✉</span><span><a href="mailto:goodwillguards@gmail.com">goodwillguards@gmail.com</a></span></li>
-          <li><span class="ico">🕐</span><span>Open 24 hours, every day of the year</span></li>
-        </ul>
-        <a class="btn btn-blue" href="tel:+64210570343">Call 0210 570 343</a>
+        <p class="sent-note" hidden id="sentNote">✔ Thanks — your request has been sent. We'll be in touch shortly.</p>
+        <form class="qform" action="https://formsubmit.co/goodwillguards@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New quote request from the Goodwill Security website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://umair-jm.github.io/Client-project-2/?sent=1#contact">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="frow">
+            <label>Name
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label>Phone
+              <input type="tel" name="phone" required autocomplete="tel">
+            </label>
+          </div>
+          <label>Email <span style="font-weight:400;">(optional)</span>
+            <input type="email" name="email" autocomplete="email">
+          </label>
+          <label>Service needed
+            <select name="service">
+              <option>Static &amp; Site Guards</option>
+              <option>Mobile Patrols</option>
+              <option>Alarm Response &amp; Monitoring</option>
+              <option>Event Security</option>
+              <option>Construction Site Security</option>
+              <option>Retail &amp; Loss Prevention</option>
+              <option>Other / Not sure yet</option>
+            </select>
+          </label>
+          <label>Tell us about your site or event
+            <textarea name="message" rows="4"></textarea>
+          </label>
+          <button class="btn btn-blue" type="submit">Send Quote Request</button>
+          <p class="fnote">Prefer to talk? Call <a href="tel:+64210570343">0210 570 343</a> any time.</p>
+        </form>
       </div>
-      <iframe class="map" title="Map showing Goodwill Security Limited at 3/102 Coronation Road, Papatoetoe"
-        src="https://maps.google.com/maps?q=3%2F102%20Coronation%20Road%2C%20Papatoetoe%2C%20Auckland%202025&z=15&output=embed"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div>
+        <ul class="info-list">
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span><a href="tel:+64210570343">0210 570 343</a><br>Available 24 hours, 7 days</span></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>3/102 Coronation Road, Papatoetoe,<br>Auckland 2025</span></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><span><a href="mailto:goodwillguards@gmail.com">goodwillguards@gmail.com</a></span></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span>Open 24 hours, every day of the year</span></li>
+        </ul>
+        <iframe class="map" title="Map showing Goodwill Security Limited at 3/102 Coronation Road, Papatoetoe"
+          src="https://maps.google.com/maps?q=3%2F102%20Coronation%20Road%2C%20Papatoetoe%2C%20Auckland%202025&z=15&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </section>
 </main>
@@ -333,6 +480,8 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   document.querySelectorAll('.menu a').forEach(a =>
     a.addEventListener('click', () => document.querySelector('.menu').classList.remove('open')));
+  if (new URLSearchParams(location.search).has('sent'))
+    document.getElementById('sentNote').hidden = false;
 </script>
 
 </body>
